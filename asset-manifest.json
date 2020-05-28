@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/anasa/static/css/main.5f361e03.chunk.css",
-    "main.js": "/anasa/static/js/main.66777843.chunk.js",
-    "main.js.map": "/anasa/static/js/main.66777843.chunk.js.map",
+    "main.js": "/anasa/static/js/main.5fd215a1.chunk.js",
+    "main.js.map": "/anasa/static/js/main.5fd215a1.chunk.js.map",
     "runtime-main.js": "/anasa/static/js/runtime-main.203fc770.js",
     "runtime-main.js.map": "/anasa/static/js/runtime-main.203fc770.js.map",
     "static/js/2.5a649a2b.chunk.js": "/anasa/static/js/2.5a649a2b.chunk.js",
     "static/js/2.5a649a2b.chunk.js.map": "/anasa/static/js/2.5a649a2b.chunk.js.map",
     "index.html": "/anasa/index.html",
-    "precache-manifest.328e25f510b4cba6d2b8629fa50135a7.js": "/anasa/precache-manifest.328e25f510b4cba6d2b8629fa50135a7.js",
+    "precache-manifest.ff47abf4da703afb68d7471366c0c85f.js": "/anasa/precache-manifest.ff47abf4da703afb68d7471366c0c85f.js",
     "service-worker.js": "/anasa/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/anasa/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.5a649a2b.chunk.js.LICENSE.txt": "/anasa/static/js/2.5a649a2b.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.203fc770.js",
     "static/js/2.5a649a2b.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.66777843.chunk.js"
+    "static/js/main.5fd215a1.chunk.js"
   ]
 }
