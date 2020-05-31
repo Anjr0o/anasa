@@ -1,8 +1,11 @@
 import React from 'react';
 
-const todos = () => {
+let todos = (props) => {
     return (
-        <p>I'm the todos component!</p>
+        <div>
+            <p>I'm the todos component!</p>
+            <div>{props.children}</div>
+        </div>
     )
 }
 

@@ -12,7 +12,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload let's try this again boiiiiiii.  Once again testing
         </p>
-        <Todos/>
+        <Todos>Bro</Todos>
         <Contact/>
         <a
           className="App-link"
