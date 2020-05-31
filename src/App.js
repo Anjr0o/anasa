@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Todos from './Todos/Todos';
+import Contact from './Contact/Contact';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload let's try this again boiiiiiii.  Once again testing
         </p>
+        <Todos/>
+        <Contact/>
         <a
           className="App-link"
           href="https://reactjs.org"
