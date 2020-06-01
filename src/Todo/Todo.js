@@ -3,7 +3,8 @@ import React from 'react';
 let todo = (props) => {
     return (
         <div>
-            <p onClick={props.click}>{props.status} {props.todoName}</p>
+            <p style={props.style}
+            onClick={props.click}>{props.status} {props.todoName}</p>
         </div>
     )
 }

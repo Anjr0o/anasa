@@ -9,12 +9,14 @@ class App extends Component {
 
   state = {
     status: 'Finish',
-    todoName: ''
+    todoName: '',
+    strikeThrough: false,
+    textDecoration: { textDecoration: '' }
   }
 
   checkedHandler = () => {
     console.log('Task Completed');
-    this.setState({status: 'Finished'})
+    this.setState({ status: 'Finished', textDecoration: { textDecoration: 'line-through' } })
   }
 
   newTodoHandler = (event) => {
@@ -23,32 +25,25 @@ class App extends Component {
     })
   }
 
+
   render() {
-    const style = {
-      cursor: 'pointer'
-    };
-
-
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Todos changed={this.newTodoHandler}/>
+          <Todos changed={this.newTodoHandler} />
           <Todo
-          style={style} 
-          todoName={this.state.todoName}
-          status={this.state.status}
-          click={this.checkedHandler}
+            todoName={this.state.todoName}
+            status={this.state.status}
+            click={this.checkedHandler}
+            style={this.state.textDecoration}
           />
-          
-          
           <a
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-        </a>
+          </a>
         </header>
       </div>
     );
