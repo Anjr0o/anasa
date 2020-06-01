@@ -10,13 +10,12 @@ class App extends Component {
   state = {
     status: 'Finish',
     todoName: '',
-    strikeThrough: false,
-    textDecoration: { textDecoration: '' }
+    strikeThrough: {}
   }
 
   checkedHandler = () => {
     console.log('Task Completed');
-    this.setState({ status: 'Finished', textDecoration: { textDecoration: 'line-through' } })
+    this.setState({ status: 'Finished', strikeThrough: { textDecoration: 'line-through' } })
   }
 
   newTodoHandler = (event) => {
@@ -35,7 +34,7 @@ class App extends Component {
             todoName={this.state.todoName}
             status={this.state.status}
             click={this.checkedHandler}
-            style={this.state.textDecoration}
+            style={this.state.strikeThrough}
           />
           <a
             className="App-link"
