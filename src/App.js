@@ -1,40 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Todos from './Todos/Todos';
 import Todo from './Todo/Todo';
 import Contact from './Contact/Contact';
 
-class App extends Component {
-
-  state = {
+const App = props => {
+  const [statusState, setStatusState] = useState({
     status: 'Finish'
-  }
+  })
 
-  checkedHandler = () => {
+  const checkedHandler = () => {
     console.log('Completed');
-    this.setState({status: 'Finished'})
+    setStatusState({ status: 'Finished' })
   }
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
 
-          <button onClick={this.checkedHandler}>Check?</button>
-          <Todo status={this.state.status}/>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <button onClick={checkedHandler}>Check?</button>
+        <Todo status={statusState.status} />
+
+
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
         </a>
-        </header>
-      </div>
-    );
-  }
+      </header>
+    </div>
+  );
 }
 
 export default App;
