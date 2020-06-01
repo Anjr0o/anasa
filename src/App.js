@@ -24,12 +24,18 @@ class App extends Component {
   }
 
   render() {
+    const style = {
+      cursor: 'pointer'
+    };
+
+
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Todos changed={this.newTodoHandler}/>
-          <Todo 
+          <Todo
+          style={style} 
           todoName={this.state.todoName}
           status={this.state.status}
           click={this.checkedHandler}
