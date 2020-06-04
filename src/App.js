@@ -8,14 +8,10 @@ import Contact from './Contact/Contact';
 class App extends Component {
 
   state = {
+    value: '',
     todos: [
-      { id: 'lekjlkck', todoName: 'getting somethin done', status: 'Finish', strikeThrough: {} },
-      { id: 'elkjx', todoName: 'getting somethin else done', status: 'Finish', strikeThrough: {} },
-      { id: 'bnenn', todoName: 'doin somethin', status: 'Finish', strikeThrough: {} }
+      {}
     ],
-    status: 'Finish',
-    todoName: '',
-    strikeThrough: {},
   }
 
   checkedHandler= (event, id) => {
@@ -26,10 +22,11 @@ class App extends Component {
     const todo = {
       ...this.state.todos[todoIndex]
     };
+
     console.log(this.state.todos[todoIndex].todoName + ' completed');
 
-    todo.strikeThrough = {textDecoration: 'line-through'};
-    todo.status = 'Finished';
+    todo.strikeThrough = 'strikethrough';
+    todo.status = 'I have finished';
 
     const todos = [...this.state.todos];
     todos[todoIndex] = todo;
@@ -37,33 +34,38 @@ class App extends Component {
     this.setState({ todos: todos })
   }
 
-  newTodoHandler = (event) => {
-
-    this.setState({
-      todoName: event.target.value
-    })
+  handleChange = (event) => {
+    this.setState({value: event.target.value});
   }
 
+  handleSubmit = (event) => {
+    const id = this.state.value.replace(this.state.value[0], String(Math.floor(Math.random() * 1000)));
+    this.setState({
+      todos: [
+        ...this.state.todos,  {
+          id: id, 
+          todoName: this.state.value,
+          // .charAt(0).toLowerCase() + this.state.value.slice(1), 
+          status: 'I need to finish', 
+          strikeThrough: ''}
+      ]
+    })
+    event.preventDefault();
+  }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <Todos changed={this.newTodoHandler} />
+          <Todos submit={this.handleSubmit} value={this.state.value} changed={this.handleChange}/>
           {this.state.todos.map((todo, index) => {
             return <Todo
+              className={todo.strikeThrough}
               todoName={todo.todoName}
               status={todo.status}
               click={(event) => this.checkedHandler(event, todo.id)}
-              style={todo.strikeThrough}
               key={todo.id} />
           })}
-          {/* <Todo
-            todoName={this.state.todoName}
-            status={this.state.status}
-            click={this.checkedHandler}
-            style={this.state.strikeThrough}
-          /> */}
           <a
             className="App-link"
             href="https://reactjs.org"
