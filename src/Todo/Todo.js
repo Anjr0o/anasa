@@ -1,12 +1,15 @@
 import React from 'react';
+import FlipMove from 'react-flip-move';
 
-let todo = (props) => {
+
+let todo = React.forwardRef((props, ref) => {
     return (
-        <div>
-            <p className={props.className}
-            onClick={props.click}>{props.status} {props.todoName}</p>
+        <div ref={ref}>
+            <br />
+            <span onClick={props.click}>{props.status} </span><span style={props.style} className={props.className}
+                onClick={props.click}>{props.todoName}</span>
         </div>
     )
-}
+})
 
 export default todo;

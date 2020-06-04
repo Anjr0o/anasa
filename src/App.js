@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Todos from './Todos/Todos';
 import Todo from './Todo/Todo';
+import FlipMove from 'react-flip-move';
 import Contact from './Contact/Contact';
 
 class App extends Component {
@@ -14,7 +15,7 @@ class App extends Component {
     ],
   }
 
-  checkedHandler= (event, id) => {
+  checkedHandler = (event, id) => {
     const todoIndex = this.state.todos.findIndex(todo => {
       return todo.id === id;
     });
@@ -23,33 +24,35 @@ class App extends Component {
       ...this.state.todos[todoIndex]
     };
 
-    console.log(this.state.todos[todoIndex].todoName + ' completed');
-
+    console.log(this.state.todos + ' completed');
+    // updates strikethrough effect
     todo.strikeThrough = 'strikethrough';
     todo.status = 'I have finished';
 
     const todos = [...this.state.todos];
+    console.log(todos);
     todos[todoIndex] = todo;
-
+    todos.push(todos.splice(todoIndex, 1)[0]);
     this.setState({ todos: todos })
   }
 
   handleChange = (event) => {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit = (event) => {
     const id = this.state.value.replace(this.state.value[0], String(Math.floor(Math.random() * 1000)));
     this.setState({
-      todos: [
-        ...this.state.todos,  {
-          id: id, 
-          todoName: this.state.value,
-          // .charAt(0).toLowerCase() + this.state.value.slice(1), 
-          status: 'I need to finish', 
-          strikeThrough: ''}
+      todos: [{
+        id: id,
+        todoName: this.state.value,
+        // .charAt(0).toLowerCase() + this.state.value.slice(1), 
+        status: 'I need to finish',
+        strikeThrough: ''
+      },
+        ...this.state.todos
       ]
-    })
+    });
     event.preventDefault();
   }
 
@@ -57,15 +60,18 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Todos submit={this.handleSubmit} value={this.state.value} changed={this.handleChange}/>
-          {this.state.todos.map((todo, index) => {
-            return <Todo
-              className={todo.strikeThrough}
-              todoName={todo.todoName}
-              status={todo.status}
-              click={(event) => this.checkedHandler(event, todo.id)}
-              key={todo.id} />
-          })}
+
+          <Todos submit={this.handleSubmit} value={this.state.value} changed={this.handleChange} />
+          <FlipMove>
+            {this.state.todos.map((todo, index) => {
+              return <Todo
+                className={todo.strikeThrough}
+                todoName={todo.todoName}
+                status={todo.status}
+                click={(event) => this.checkedHandler(event, todo.id)}
+                key={todo.id} />
+            })}
+          </FlipMove>
           <a
             className="App-link"
             href="https://reactjs.org"
