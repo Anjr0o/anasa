@@ -32,7 +32,8 @@ class App extends Component {
     const todos = [...this.state.todos];
     console.log(todos);
     todos[todoIndex] = todo;
-    todos.push(todos.splice(todoIndex, 1)[0]);
+    if (todoIndex == todos.length-1) {todos.splice(todoIndex, 1)}
+    else {todos.push(todos.splice(todoIndex, 1)[0]);}
     this.setState({ todos: todos })
   }
 
