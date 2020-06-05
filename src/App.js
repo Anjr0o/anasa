@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import classes from './App.module.css';
 import Todos from './Todos/Todos';
 import Todo from './Todo/Todo';
 import FlipMove from 'react-flip-move';
 import Contact from './Contact/Contact';
+import styled from 'styled-components';
 
 class App extends Component {
 
@@ -22,7 +23,7 @@ class App extends Component {
         id: '4939',
         todoName: "click this",
         status: 'Click the bottom, ',
-        strikeThrough: 'strikethrough'
+        strikeThrough: classes.strikethrough
       }
     ],
   }
@@ -38,7 +39,7 @@ class App extends Component {
 
     console.log(this.state.todos + ' completed');
     // updates strikethrough effect
-    todo.strikeThrough = 'strikethrough';
+    todo.strikeThrough = classes.strikethrough;
     todo.status = 'I no longer need to';
 
     const todos = [...this.state.todos];
@@ -82,9 +83,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
+      <div className={classes.App}>
+        <header className={classes.AppHeader}>
           <Todos submit={this.handleSubmit} value={this.state.value} changed={this.handleChange} />
           <FlipMove>
             {this.state.todos.map((todo, index) => {
@@ -96,13 +96,6 @@ class App extends Component {
                 key={todo.id} />
             })}
           </FlipMove>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a>
         </header>
       </div>
     );
