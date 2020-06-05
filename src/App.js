@@ -10,8 +10,20 @@ class App extends Component {
 
   state = {
     value: '',
+    // Tutorial Todos
     todos: [
-      {}
+      {
+        id: 'kdj3',
+        todoName: 'click this item',
+        status: 'Try to',
+        strikeThrough: ''
+      },
+      {
+        id: '4939',
+        todoName: "click this",
+        status: 'Click the bottom, ',
+        strikeThrough: 'strikethrough'
+      }
     ],
   }
 
@@ -27,13 +39,25 @@ class App extends Component {
     console.log(this.state.todos + ' completed');
     // updates strikethrough effect
     todo.strikeThrough = 'strikethrough';
-    todo.status = 'I have finished';
+    todo.status = 'I no longer need to';
 
     const todos = [...this.state.todos];
     console.log(todos);
     todos[todoIndex] = todo;
-    if (todoIndex == todos.length-1) {todos.splice(todoIndex, 1)}
-    else {todos.push(todos.splice(todoIndex, 1)[0]);}
+    if (todoIndex == todos.length - 1) {
+      todos.splice(todoIndex, 1);
+      if (todos.length == 0) {
+        todos.push(
+          {
+            id: 'kdjkd3',
+            todoName: 'find more to do',
+            status: 'Wow I really need to',
+            strikeThrough: ''
+          }
+        )
+      }
+    }
+    else { todos.push(todos.splice(todoIndex, 1)[0]); }
     this.setState({ todos: todos })
   }
 
@@ -47,11 +71,10 @@ class App extends Component {
       todos: [{
         id: id,
         todoName: this.state.value,
-        // .charAt(0).toLowerCase() + this.state.value.slice(1), 
-        status: 'I need to finish',
+        status: 'I need to',
         strikeThrough: ''
       },
-        ...this.state.todos
+      ...this.state.todos
       ]
     });
     event.preventDefault();
