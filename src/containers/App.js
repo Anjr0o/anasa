@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import classes from './App.module.css';
-import Todos from './Todos/Todos';
-import Todo from './Todo/Todo';
+import Todos from '../components/Todos/TodoForm';
+import Todo from '../components/Todos/Todo/Todo';
 import FlipMove from 'react-flip-move';
-import Contact from './Contact/Contact';
-import styled from 'styled-components';
+import Contact from '../components/Contact/Contact';
 
 class App extends Component {
 
