@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "543ab1df1e81d870644af45bad9be236",
+    "revision": "870eec00055e7c40ec3fc51fd0cc465a",
     "url": "/anasa/index.html"
   },
   {
-    "revision": "8926ec5c6560e1e97716",
-    "url": "/anasa/static/css/main.a0a469da.chunk.css"
+    "revision": "5df7ec90904b08a13773",
+    "url": "/anasa/static/css/main.a6f2d163.chunk.css"
   },
   {
-    "revision": "91864ac3b3e2b4e9bcb5",
-    "url": "/anasa/static/js/2.85c99651.chunk.js"
+    "revision": "c6e24de9c2545af64dd7",
+    "url": "/anasa/static/js/2.0c661304.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/anasa/static/js/2.85c99651.chunk.js.LICENSE.txt"
+    "url": "/anasa/static/js/2.0c661304.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8926ec5c6560e1e97716",
-    "url": "/anasa/static/js/main.6f4d797f.chunk.js"
+    "revision": "5df7ec90904b08a13773",
+    "url": "/anasa/static/js/main.1ed14690.chunk.js"
   },
   {
     "revision": "44295d5efe7e3ad60c1a",
