@@ -5,7 +5,7 @@ let todos = (props) => {
         <div>
             <p>I need to...</p>
             <form onSubmit={props.submit}>
-                <input type="text" placeholder="write a todo list" value={props.value} onChange={props.changed} />
+                <input type="text" placeholder="Write a todo list" value={props.value} onChange={props.changed} />
             </form>
             <div>{props.children}</div>
         </div>

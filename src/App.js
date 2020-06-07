@@ -78,6 +78,7 @@ class App extends Component {
       ...this.state.todos
       ]
     });
+    this.setState({value: ""});
     event.preventDefault();
   }
 

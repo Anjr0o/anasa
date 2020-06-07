@@ -48,16 +48,23 @@
 input {
   border-width: 0;
   background: none;
-  color: gray;
+  color: rgba(79, 176, 174);
   font-size: large;
-  border-bottom: 2px;
+  padding-bottom: 5px;
+  box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+}
+
+
+::placeholder {
+  color: rgba(79, 176, 174);
+  opacity: .3;
 }
 
 input:focus {
   border-bottom: 2px;
-
+  caret-color: rgba(79, 176, 174, 0.3);
   outline: 0;
   border-width: 0;
   background: none;
-  caret-color: white;
+  box-shadow: rgba(79, 176, 174) 0px 2px;
 }
