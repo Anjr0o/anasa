@@ -1,8 +1,5 @@
 .App {
   text-align: center;
-}
-
-.AppHeader {
   background-color: #282c34;
   min-height: 100vh;
   /* display: flex; */
@@ -18,7 +15,7 @@
 .strikethrough {
 	display: inline-block;
 	position: relative;
-	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+  transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
 }
 
 .strikethrough::after {
@@ -67,4 +64,8 @@ input:focus {
   border-width: 0;
   background: none;
   box-shadow: rgba(79, 176, 174) 0px 2px;
+}
+
+.todo {
+  width: 100%;
 }

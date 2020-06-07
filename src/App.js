@@ -85,7 +85,6 @@ class App extends Component {
   render() {
     return (
       <div className={classes.App}>
-        <header className={classes.AppHeader}>
           <Todos submit={this.handleSubmit} value={this.state.value} changed={this.handleChange} />
           <FlipMove>
             {this.state.todos.map((todo, index) => {
@@ -97,7 +96,6 @@ class App extends Component {
                 key={todo.id} />
             })}
           </FlipMove>
-        </header>
       </div>
     );
   }

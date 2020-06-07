@@ -3,7 +3,9 @@ import React from 'react';
 let todos = (props) => {
     return (
         <div>
-            <p>I need to...</p>
+            <br/>
+            <div>I need to...</div>
+            <br/>
             <form onSubmit={props.submit}>
                 <input type="text" placeholder="Write a todo list" value={props.value} onChange={props.changed} />
             </form>
