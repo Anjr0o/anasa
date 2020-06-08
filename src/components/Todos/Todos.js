@@ -2,7 +2,6 @@ import React from 'react';
 import Todo from './Todo/Todo';
 import FlipMove from 'react-flip-move';
 
-
 const todos = (props) =>
     <FlipMove>{
         props.todos.map((todo, index) => {

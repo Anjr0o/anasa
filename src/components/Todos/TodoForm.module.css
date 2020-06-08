@@ -1,0 +1,42 @@
+form {
+    display: inline-block;
+}
+
+input {
+    border-width: 0;
+    background: none;
+    color: rgba(79, 176, 174);
+    font-size: large;
+    padding-bottom: 5px;
+    box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+}
+
+::placeholder {
+    color: rgba(79, 176, 174);
+    opacity: .3;
+    font-size: calc(10px + 2vmin);
+}
+
+input:focus {
+    border-bottom: 2px;
+    caret-color: rgba(79, 176, 174, 0.3);
+    outline: 0;
+    border-width: 0;
+    background: none;
+    box-shadow: rgba(79, 176, 174) 0px 2px;
+}
+
+button {
+    background-color: rgba(79, 176, 174, .3);
+    color: rgba(255,255,255,.3);
+    border: none;
+    margin: 5px;
+    border-radius: .5em;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(79, 176, 174);
+}

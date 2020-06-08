@@ -3,7 +3,7 @@ import classes from './App.module.css';
 import TodoForm from '../components/Todos/TodoForm';
 import Todos from '../components/Todos/Todos';
 import Contact from '../components/Contact/Contact';
-
+import { BrowserRouter, Route, NavLink} from 'react-router-dom';
 class App extends Component {
 
   state = {
@@ -95,12 +95,35 @@ class App extends Component {
 
   render() {
     return (
-      <div className={classes.App}>
-        <TodoForm submit={this.handleSubmit} value={this.state.value} changed={this.handleChange} />
-        <Todos
-          todos={this.state.todos}
-          checked={this.checkedHandler} />
-      </div>
+      <BrowserRouter>
+        <div className={classes.App}>
+          <header className={classes.NavBar}>
+            <nav>
+              <ul>
+                <li>
+                  <NavLink 
+                  activeClassName={classes.active}
+                  to="/todos">Todos</NavLink>
+                </li>
+                <li>
+                  <NavLink 
+                  activeClassName={classes.active}
+                  to="/contact">Contact</NavLink>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <Route path="/todos" render={() => (
+            <div>
+              <TodoForm submit={this.handleSubmit} value={this.state.value} changed={this.handleChange} />
+              <Todos
+                todos={this.state.todos}
+                checked={this.checkedHandler} />
+            </div>
+          )}></Route>
+          <Route path="/contact" component={Contact} />
+        </div>
+      </BrowserRouter>
     );
   }
 }

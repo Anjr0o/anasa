@@ -43,30 +43,38 @@
 	}
 }
 
-input {
-  border-width: 0;
-  background: none;
-  color: rgba(79, 176, 174);
-  font-size: large;
-  padding-bottom: 5px;
-  box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+.NavBar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
 }
 
-
-::placeholder {
-  color: rgba(79, 176, 174);
-  opacity: .3;
+.NavBar li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
-input:focus {
-  border-bottom: 2px;
-  caret-color: rgba(79, 176, 174, 0.3);
-  outline: 0;
-  border-width: 0;
-  background: none;
-  box-shadow: rgba(79, 176, 174) 0px 2px;
+.NavBar a {
+  text-decoration: none;
+  padding: 10px;
+  color: rgba(255,255,255,.3);
+  border-radius: .25em;
+  background-color: rgba(79, 176, 174, .3);
 }
 
-.todo {
+.NavBar a:hover {
+  color: rgba(255,255,255);
+}
+
+.NavBar a.active {
+  background-color: rgba(79, 176, 174, 1);
+  color: white;
+}
+
+.NavBar nav {
+  text-align: left;
   width: 100%;
 }
