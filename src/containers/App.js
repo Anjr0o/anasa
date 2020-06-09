@@ -143,7 +143,7 @@ class App extends Component {
                 <li>
                   <NavLink
                     activeClassName={classes.active}
-                    to="/todos">Todos</NavLink>
+                    to="/" exact>Todos</NavLink>
                 </li>
                 <li>
                   <NavLink
@@ -153,7 +153,7 @@ class App extends Component {
               </ul>
             </nav>
           </header>
-          <Route path="/todos" render={() => (
+          <Route path="/" exact render={() => (
             <div>
               <TodoForm submit={this.handleSubmit} value={this.state.value} active={this.state.selected} selected={this.handleSelected} changed={this.handleChange} />
               <Todos
