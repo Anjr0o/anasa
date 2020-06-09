@@ -44,6 +44,12 @@ button {
     border-radius: .5em;
 }
 
+.active {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(79, 176, 174);
+}
 button:focus {
     border: none;
     outline: none;

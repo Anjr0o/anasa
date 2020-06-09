@@ -3,10 +3,18 @@ import classes from './App.module.css';
 import TodoForm from '../components/Todos/TodoForm';
 import Todos from '../components/Todos/Todos';
 import Contact from '../components/Contact/Contact';
-import { BrowserRouter, Route, NavLink} from 'react-router-dom';
+import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+
 class App extends Component {
 
   state = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+    thankYou: 'none',
+    contactDisplay: 'inline-block',
     selected: 'All',
     // Value of TodoForm.js Input box
     value: '',
@@ -79,7 +87,7 @@ class App extends Component {
   }
 
   handleSelected = (event) => {
-    this.setState({selected: event.target.value});
+    this.setState({ selected: event.target.value });
   }
 
   handleSubmit = (event) => {
@@ -98,6 +106,32 @@ class App extends Component {
     event.preventDefault();
   }
 
+  handleContact = (event) => {
+    event.preventDefault();
+    this.setState({ thankYou: 'block', contactDisplay: 'none' })
+
+  }
+
+  onFirstNameChange = (event) => {
+    this.setState({ firstName: event.target.value })
+  }
+
+  onLastNameChange = (event) => {
+    this.setState({ lastName: event.target.value })
+  }
+
+  onPhoneChange = (event) => {
+    this.setState({ phone: event.target.value })
+  }
+
+  onEmailChange = (event) => {
+    this.setState({ email: event.target.value })
+  }
+
+  onMessageChange = (event) => {
+    this.setState({ message: event.target.value })
+  }
+
 
   render() {
     return (
@@ -107,14 +141,14 @@ class App extends Component {
             <nav>
               <ul>
                 <li>
-                  <NavLink 
-                  activeClassName={classes.active}
-                  to="/todos">Todos</NavLink>
+                  <NavLink
+                    activeClassName={classes.active}
+                    to="/todos">Todos</NavLink>
                 </li>
                 <li>
-                  <NavLink 
-                  activeClassName={classes.active}
-                  to="/contact">Contact</NavLink>
+                  <NavLink
+                    activeClassName={classes.active}
+                    to="/contact">Contact</NavLink>
                 </li>
               </ul>
             </nav>
@@ -128,7 +162,17 @@ class App extends Component {
                 selected={this.state.selected} />
             </div>
           )}></Route>
-          <Route path="/contact" component={Contact} />
+          <Route path="/contact" render={() => (
+            <Contact
+              contactDisplay={this.state.contactDisplay}
+              submit={this.handleContact}
+              firstNameChanged={this.onFirstNameChange}
+              lastNameChanged={this.onLastNameChange}
+              emailChanged={this.onEmailChange}
+              phoneChanged={this.onPhoneChange}
+              messageChanged={this.onMessageChange}
+              display={this.state.thankYou} />
+          )}></Route>
         </div>
       </BrowserRouter>
     );

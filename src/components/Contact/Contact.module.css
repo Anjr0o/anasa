@@ -1,0 +1,84 @@
+.contactForm {
+    text-align: left;
+    margin-top: 40px;
+}
+.contactForm input {
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 20px;
+    margin-top: 0;
+    border-width: 0;
+    background: none;
+    color: rgba(79, 176, 174);
+    font-size: calc(10px + 2vmin);
+    padding-bottom: 5px;
+    box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+}
+
+.contactForm textarea {
+    width: calc(100% - 44px) !important;
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 20px;
+    margin-top: 0;
+    border-width: 0;
+    background: none;
+    color: rgba(79, 176, 174);
+    font-size: calc(10px + 2vmin);
+    padding-bottom: 5px;
+    box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+}
+
+.contactForm textarea:focus {
+    border-bottom: 2px;
+    caret-color: rgba(79, 176, 174, 0.3);
+    outline: 0;
+    border-width: 0;
+    background: none;
+    box-shadow: rgba(79, 176, 174) 0px 2px;
+}
+
+.contactForm ::placeholder {
+    color: rgba(79, 176, 174);
+    opacity: .3;
+    font-size: calc(10px + 2vmin);
+    padding: 0;
+}
+
+.contactForm input:focus {
+    border-bottom: 2px;
+    caret-color: rgba(79, 176, 174, 0.3);
+    outline: 0;
+    border-width: 0;
+    background: none;
+    box-shadow: rgba(79, 176, 174) 0px 2px;
+}
+
+.contactForm button {
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    background-color: rgba(79, 176, 174, .3);
+    color: rgba(255,255,255,.3);
+    border: none;
+    margin: 20px;
+    border-radius: .5em;
+    height: 40px;
+    margin-top: 0;
+    width: calc(100% - 40px);
+}
+
+.contactForm .active {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(79, 176, 174);
+}
+.contactForm button:focus {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(79, 176, 174);
+}
+
+.thankYou {
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 3em;
+    margin-top: 20%;
+}

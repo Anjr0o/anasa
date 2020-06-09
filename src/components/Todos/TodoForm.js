@@ -11,7 +11,9 @@ let todos = (props) => {
             </form>
             <div>{props.children}</div>
             <div display='flex'>
-                <button onClick={props.selected} value='All'>All</button><button value='Finished' onClick={props.selected}>Finished</button><button value="Unfinished" onClick={props.selected}>Unfinished</button>
+                <button className={props.active === 'All' ? classes.active : ''} onClick={props.selected} value='All'>All</button>
+                <button className={props.active === 'Finished' ? classes.active : ''} value='Finished' onClick={props.selected}>Finished</button>
+                <button className={props.active === 'Unfinished' ? classes.active : ''} value="Unfinished" onClick={props.selected}>Unfinished</button>
             </div>
         </div>
     )
