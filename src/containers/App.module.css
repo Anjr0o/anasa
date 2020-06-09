@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=IBM+Plex+Sans:wght@600&display=swap');
 .App {
+  font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
   text-align: center;
   background-color: #282c34;
+  /* background-image: url("https://source.unsplash.com/collection/1368747"); */
   min-height: 100vh;
   /* display: flex; */
   /* flex-direction: column; */
@@ -27,7 +30,7 @@
 	height: 2px;
   /* box-shadow: 0 1px rgba(0, 0, 0, 0.6); */
   background-color: rgba(79, 176, 174);
-  margin-top: -0.6em;
+  margin-top: -0.7em;
   transform-origin: center left;
 	animation: strikethrough 1s cubic-bezier(.55, 0, .1, 1) 1;
 }
@@ -65,8 +68,9 @@
   background-color: rgba(79, 176, 174, .3);
 }
 
-.NavBar a:hover {
+.NavBar a:hover, .NavBar a:focus {
   color: rgba(255,255,255);
+  outline: none;
 }
 
 .NavBar a.active {

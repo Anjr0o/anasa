@@ -11,7 +11,8 @@ const todos = (props) =>
                     todoName={todo.todoName}
                     status={todo.status}
                     click={(event) => props.checked(event, todo.id)}
-                    key={todo.id} />
+                    key={todo.id}
+                    selected={props.selected} />
             )
         })
     }

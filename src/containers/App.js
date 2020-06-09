@@ -7,6 +7,7 @@ import { BrowserRouter, Route, NavLink} from 'react-router-dom';
 class App extends Component {
 
   state = {
+    selected: 'All',
     // Value of TodoForm.js Input box
     value: '',
     // Starting Todos for tutorial
@@ -77,6 +78,10 @@ class App extends Component {
     this.setState({ value: event.target.value });
   }
 
+  handleSelected = (event) => {
+    this.setState({selected: event.target.value});
+  }
+
   handleSubmit = (event) => {
     const id = this.state.value.replace(this.state.value[0], String(Math.floor(Math.random() * 1000)));
     this.setState({
@@ -92,6 +97,7 @@ class App extends Component {
     this.setState({ value: "" });
     event.preventDefault();
   }
+
 
   render() {
     return (
@@ -115,10 +121,11 @@ class App extends Component {
           </header>
           <Route path="/todos" render={() => (
             <div>
-              <TodoForm submit={this.handleSubmit} value={this.state.value} changed={this.handleChange} />
+              <TodoForm submit={this.handleSubmit} value={this.state.value} active={this.state.selected} selected={this.handleSelected} changed={this.handleChange} />
               <Todos
                 todos={this.state.todos}
-                checked={this.checkedHandler} />
+                checked={this.checkedHandler}
+                selected={this.state.selected} />
             </div>
           )}></Route>
           <Route path="/contact" component={Contact} />

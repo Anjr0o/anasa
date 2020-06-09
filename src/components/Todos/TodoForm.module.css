@@ -1,14 +1,23 @@
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap'); */
+
 form {
     display: inline-block;
 }
 
+span, div {
+    font-family: 'Architects Daughter', cursive;
+}
+
 input {
+    /* font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif; */
     border-width: 0;
     background: none;
     color: rgba(79, 176, 174);
-    font-size: large;
+    font-size: calc(10px + 2vmin);
     padding-bottom: 5px;
     box-shadow: rgba(79, 176, 174, 0.3) 0px 1px;
+    font-family: 'Architects Daughter', cursive;
 }
 
 ::placeholder {
@@ -27,6 +36,7 @@ input:focus {
 }
 
 button {
+    font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
     background-color: rgba(79, 176, 174, .3);
     color: rgba(255,255,255,.3);
     border: none;
