@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/anasa/static/css/main.f5c860c2.chunk.css",
-    "main.js": "/anasa/static/js/main.3287cd58.chunk.js",
-    "main.js.map": "/anasa/static/js/main.3287cd58.chunk.js.map",
+    "main.css": "/anasa/static/css/main.650a73e7.chunk.css",
+    "main.js": "/anasa/static/js/main.a06e93d1.chunk.js",
+    "main.js.map": "/anasa/static/js/main.a06e93d1.chunk.js.map",
     "runtime-main.js": "/anasa/static/js/runtime-main.203fc770.js",
     "runtime-main.js.map": "/anasa/static/js/runtime-main.203fc770.js.map",
-    "static/js/2.d4b93124.chunk.js": "/anasa/static/js/2.d4b93124.chunk.js",
-    "static/js/2.d4b93124.chunk.js.map": "/anasa/static/js/2.d4b93124.chunk.js.map",
+    "static/js/2.01c83f6f.chunk.js": "/anasa/static/js/2.01c83f6f.chunk.js",
+    "static/js/2.01c83f6f.chunk.js.map": "/anasa/static/js/2.01c83f6f.chunk.js.map",
     "index.html": "/anasa/index.html",
-    "precache-manifest.2e06b38f5d8884610c19d84532c407e1.js": "/anasa/precache-manifest.2e06b38f5d8884610c19d84532c407e1.js",
+    "precache-manifest.2caf22414399a818f47822d10b6f1de2.js": "/anasa/precache-manifest.2caf22414399a818f47822d10b6f1de2.js",
     "service-worker.js": "/anasa/service-worker.js",
-    "static/css/main.f5c860c2.chunk.css.map": "/anasa/static/css/main.f5c860c2.chunk.css.map",
-    "static/js/2.d4b93124.chunk.js.LICENSE.txt": "/anasa/static/js/2.d4b93124.chunk.js.LICENSE.txt"
+    "static/css/main.650a73e7.chunk.css.map": "/anasa/static/css/main.650a73e7.chunk.css.map",
+    "static/js/2.01c83f6f.chunk.js.LICENSE.txt": "/anasa/static/js/2.01c83f6f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.203fc770.js",
-    "static/js/2.d4b93124.chunk.js",
-    "static/css/main.f5c860c2.chunk.css",
-    "static/js/main.3287cd58.chunk.js"
+    "static/js/2.01c83f6f.chunk.js",
+    "static/css/main.650a73e7.chunk.css",
+    "static/js/main.a06e93d1.chunk.js"
   ]
 }
