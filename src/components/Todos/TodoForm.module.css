@@ -56,3 +56,6 @@ button:focus {
     color: white;
     background-color: rgba(79, 176, 174);
 }
+button:hover {
+    color: white;
+}

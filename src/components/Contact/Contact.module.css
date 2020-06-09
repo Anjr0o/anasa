@@ -70,7 +70,7 @@
     color: white;
     background-color: rgba(79, 176, 174);
 }
-.contactForm button:focus {
+.contactForm button:hover {
     border: none;
     outline: none;
     color: white;
